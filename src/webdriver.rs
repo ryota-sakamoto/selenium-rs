@@ -79,7 +79,7 @@ impl WebDriver {
     /// on failure
     pub fn start_session(&mut self) -> reqwest::Result<()> {
         let body = NewSessionRequest::new(&self.browser);
-        let url = construct_url(vec!["session/"]);
+        let url = construct_url(vec!["session"]);
 
         let response: NewSessionResponse = self.client
             .post(url)
